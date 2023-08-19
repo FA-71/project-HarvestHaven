@@ -1,4 +1,6 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { SlideDataService } from 'src/app/services/slide-data.service';
+import { Slide } from 'src/app/models/slide';
 
 @Component({
   selector: 'app-home-slide',
@@ -8,12 +10,21 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 export class HomeSlideComponent {
   
   @ViewChild('homeSlides') slides!: ElementRef;
-  slideIndex = 1
+  slideIndex = 0
 
+  slides_data: Slide[] = [];
+
+  constructor(public slideServie: SlideDataService) {}
+
+  ngOnInit() { 
+    this.slides_data = this.slideServie.get_data();
+    console.log(this.slides_data)
+  }
 
   ngAfterViewInit(): void {
     this.get_slide_list();
   }
+
 
   slide_rotation(slides: any) { 
     slides[this.slideIndex].classList.remove('in-animation')

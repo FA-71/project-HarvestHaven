@@ -1,4 +1,9 @@
 <div class="home-slide-item"> 
-  <img class="home-slide-item__bg-img" src="../../../assets/slides/{{data}}" alt="veg and fruits">
-  <p>this is jlksdf jk j lkj sjfl kjfsdjf Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus reiciendis earum laborum, ratione vitae pariatur tempore error rem, placeat ut consequatur optio totam illo aspernatur nobis beatae repellendus voluptatem unde.</p>
+  <img class="home-slide-item__bg-img" src="../../../assets/slides/{{data.img}}" alt="veg and fruits">
+  <div class="home-slide-item__details">
+    <h1 class="home-slide-item__title">{{data.title_a}} <span class="home-slide-item__special">{{data.title_special}}</span> {{data.title_b}}</h1>
+    <div class="home-slide-item__line"></div>
+    <p class="home-slide-item__des">{{data.des}}</p>
+    <a routerLink="{{data.link}}" class="home-slide-item__link"><p class="home-slide-item__link-text">Shop Now</p></a>
+  </div>
 </div>

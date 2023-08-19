@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Slide } from 'src/app/models/slide';
 
 @Component({
   selector: 'app-home-slide-item',
@@ -6,9 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./home-slide-item.component.css']
 })
 export class HomeSlideItemComponent {
-  @Input() data: any;
-  imgs = ["../../../assets/slides/1.jpg","../../../assets/slides/1.jpg"]
- 
+  @Input() data!: Slide;
 
-  
+  ngOnInit() { 
+    console.log(this.data)
+  }
 }
