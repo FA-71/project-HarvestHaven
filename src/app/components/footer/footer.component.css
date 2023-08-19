@@ -1,0 +1,36 @@
+footer { 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 18vh;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+footer * { 
+  color: white
+}
+
+.footer__content { 
+  height: 90%;
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__contacts { 
+  display: flex;
+  gap: 70px;
+  font-weight: 300;
+}
+
+.footer-contact h4 { 
+  padding-bottom: 7px;
+}
+
+.footer-contact p { 
+  font-weight: 300;
+  font-size: 15px;
+  padding-block: 1px;
+}
