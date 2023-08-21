@@ -10,8 +10,8 @@ import { Slide } from 'src/app/models/slide';
 export class HomeSlideComponent {
   
   @ViewChild('homeSlides') slides!: ElementRef;
-  slideIndex = 0
 
+  slideIndex = 0
   slides_data: Slide[] = [];
 
   constructor(public slideServie: SlideDataService) {}
@@ -25,10 +25,10 @@ export class HomeSlideComponent {
     this.get_slide_list();
   }
 
-
+  // change slides every 8000ms
   slide_rotation(slides: any) { 
     slides[this.slideIndex].classList.remove('in-animation')
-    slides[this.slideIndex].classList.add('out-animation')
+    slides[this.slideIndex].classList.add('out-animation')  
 
     if ( 0 <= this.slideIndex && this.slideIndex < slides.length - 1) { 
       ++this.slideIndex;

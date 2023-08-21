@@ -10,6 +10,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeSlideItemComponent } from './components/home-slide-item/home-slide-item.component';
 import { HomeSlideComponent } from './components/home-slide/home-slide.component';
+import { CategoriesPageItemComponent } from './components/categories-page-item/categories-page-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeSlideComponent } from './components/home-slide/home-slide.component
     CategoriesComponent,
     FooterComponent,
     HomeSlideItemComponent,
-    HomeSlideComponent
+    HomeSlideComponent,
+    CategoriesPageItemComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .header__title { 
@@ -37,9 +38,53 @@ header {
   gap: 15px;
 }
 
-.header__link { 
+.header__link {
+  text-align: center; 
   text-decoration: none;
   color: white;
   font-size: 15px;
   font-weight: 500;
 }
+
+.header__search-logo{ 
+  display: none;
+}
+
+.header__menu-logo { 
+  display: none;
+}
+
+@media screen and (max-width:1000px) { 
+  .header__search {
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 800px) { 
+  .header__title { 
+    font-size: 20px;
+  }
+  .header__search {
+    display: none;
+  }
+  .header__right .header__link { 
+    display: none;
+  }
+  .header__right img { 
+    width: 30px;
+  }
+  .header__account-logo { 
+    display: none;
+  }
+  .header__right img.header__search-logo { 
+    display: block;
+    width: 28px;
+  }
+  .header__right img.header__menu-logo { 
+    display: block;
+    width: 40px;
+  }
+}
+
+

@@ -1,1 +1,6 @@
-<p>categories works!</p>
+<div class="categories-container">
+  <h1 class="categories-container__h1">Categories</h1>
+  <div class="categories">
+    <app-categories-page-item *ngFor="let category of categories_data" [data]="category"></app-categories-page-item>
+  </div>
+</div>

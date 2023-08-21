@@ -1,0 +1,28 @@
+.category-item { 
+  height: 330px;
+  width: 100%;
+
+}
+
+.category-item__img { 
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 3px 4px 0px rgb(192, 192, 192); 
+}
+
+.category-item__name { 
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) { 
+  .category-item { 
+    height: 250px;
+  }
+  .category-item__name { 
+    font-size: 20px;
+  }
+}
