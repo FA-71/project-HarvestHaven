@@ -4,6 +4,11 @@
 
 }
 
+.category-item__link { 
+  color: black;
+  text-decoration: none;
+}
+
 .category-item__img { 
   height: 90%;
   width: 100%;

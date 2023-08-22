@@ -111,6 +111,7 @@
     top: 40%;
   }
   .home-slide-item__title { 
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.311);
     font-size: 35px;
   }
   .home-slide-item__line { 

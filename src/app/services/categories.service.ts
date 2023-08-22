@@ -18,4 +18,15 @@ export class CategoriesService {
   get_Categories(): Category[] { 
     return this.categories_data;
   }
+
+  get_category(name: string | null): Category { 
+    const category = this.categories_data.find((category) => name === category.name)
+    if (category) { 
+      return category;
+    }
+    else { 
+      return {name: '', img_1:'', img_2: ''};
+    }
+  }
+
 }

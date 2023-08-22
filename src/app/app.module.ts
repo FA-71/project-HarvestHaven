@@ -11,6 +11,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeSlideItemComponent } from './components/home-slide-item/home-slide-item.component';
 import { HomeSlideComponent } from './components/home-slide/home-slide.component';
 import { CategoriesPageItemComponent } from './components/categories-page-item/categories-page-item.component';
+import { HomeDetailsComponent } from './components/home-details/home-details.component';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CategoriesPageItemComponent } from './components/categories-page-item/c
     FooterComponent,
     HomeSlideItemComponent,
     HomeSlideComponent,
-    CategoriesPageItemComponent
+    CategoriesPageItemComponent,
+    HomeDetailsComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
