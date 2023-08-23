@@ -5,6 +5,8 @@ footer {
   height: 18vh;
   background-color: var(--primary-color);
   overflow: hidden;
+  z-index: 100;
+  position: relative;
 }
 
 footer * { 

@@ -1,1 +1,9 @@
-<p>{{category.name}}</p>
+<div class="category">
+  <div class="category__nav">
+    <h2 class="category__h2">Categories</h2>
+    <a *ngFor="let c of categories" [routerLink]="['/categories', c.name]" routerLinkActive="category__nav-link--active" class="category__nav-link"><p class="category__nav-link-p">{{c.name}}</p></a>
+  </div>
+  <div class="category__items">
+    <h1 class="category__h1">{{category.name}}</h1>
+  </div>
+</div>

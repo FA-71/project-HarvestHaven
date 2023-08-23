@@ -10,13 +10,18 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class CategoryComponent implements OnInit{
   category!: Category;
+  categories!: Category[]; 
   
   constructor(private router: Router, private route: ActivatedRoute, private categoriesService: CategoriesService) {}
 
   ngOnInit() { 
-    const name = this.route.snapshot.paramMap.get('category')
-    this.category = this.categoriesService.get_category(name)
-    console.log(this.category)
+    this.route.paramMap.subscribe(params => {
+      const name = params.get('category')
+      this.categories = this.categoriesService.get_Categories()
+      this.category = this.categoriesService.get_category(name)
+      console.log(this.category)
+
+    })
   }
   
 }
