@@ -1,0 +1,29 @@
+.quantity-div { 
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+.quantity-div__item { 
+  width: 100%;
+}
+
+.quantity-div__button { 
+  appearance: none;
+  padding: 5px;
+  width: 95%;
+  flex-basis: 25%;
+  height: 35px;
+  /*width: 85px; */
+  background-color: var(--primary-color-50);
+  border: 1px solid var(--primary-color-300);
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.quantity-div__button-active { 
+  background-color: var(--primary-color-300);
+  border: 1px solid var(--primary-color-600);
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.147);
+}

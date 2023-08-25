@@ -1,0 +1,19 @@
+<div class="product-page">
+  <img class="product-page__img" src="../../../assets/products/{{ product.img }}" alt="product image" />
+  <div class="product-page__details">
+    <h1 class="product-page__title">{{product.name}}</h1>
+    <p class="product-page__des">{{product.des}}</p>
+    <div class="product-page__quantity">
+      <h3 class="product-page__h3">Quantity: </h3>
+      <app-quantity-div (quantityClicked)="handleQuantity($event)"></app-quantity-div>
+    </div>
+    <p class="product-page__shipping">Free Shipping</p>
+    <div class="product-page__buy-div">
+      <p class="product-page__price-p">Total: <span class="product-page__price">${{product.price * no}}</span></p>
+      <div class="product-page__buttons">
+        <app-main-btn [color]="300" text="Add to cart" (btnClicked)="handleAddToCart()"></app-main-btn>
+        <app-main-btn text="Buy now"></app-main-btn>
+      </div>
+    </div>
+  </div>
+</div>

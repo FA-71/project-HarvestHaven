@@ -13,6 +13,10 @@ import { HomeSlideComponent } from './components/home-slide/home-slide.component
 import { CategoriesPageItemComponent } from './components/categories-page-item/categories-page-item.component';
 import { HomeDetailsComponent } from './components/home-details/home-details.component';
 import { CategoryComponent } from './components/category/category.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
+import { QuantityDivComponent } from './components/quantity-div/quantity-div.component';
+import { MainBtnComponent } from './components/main-btn/main-btn.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { CategoryComponent } from './components/category/category.component';
     HomeSlideComponent,
     CategoriesPageItemComponent,
     HomeDetailsComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProductCardComponent,
+    ProductPageComponent,
+    QuantityDivComponent,
+    MainBtnComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+.product-card { 
+  width: 100%;
+}
+
+.product-card__link { 
+  text-decoration: none;
+}
+
+.product-card__img { 
+  width: 100%;
+  aspect-ratio: 0.75;
+  object-fit: cover;
+  border: 1px solid var(--primary-color-100)
+}
+
+.product-card__title { 
+  font-size: 15px;
+  color: var(--primary-color-900);
+}
+
+.product-card__price-p { 
+  color: black;
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.product-card__price { 
+  color: var(--secondary-blue);
+}

@@ -5,5 +5,8 @@
   </div>
   <div class="category__items">
     <h1 class="category__h1">{{category.name}}</h1>
+    <div class="category__card-container">
+      <app-product-card *ngFor="let p of products" [data]="p"></app-product-card>
+    </div>
   </div>
 </div>
