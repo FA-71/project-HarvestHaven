@@ -46,6 +46,20 @@ header {
   font-weight: 500;
 }
 
+.header__link-active { 
+  border-bottom: 2px solid rgba(255, 255, 255, 0.741);
+}
+
+.header__cart { 
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header__cart-no { 
+  color: white;
+}
+
 .header__search-logo{ 
   display: none;
 }
@@ -86,5 +100,3 @@ header {
     width: 40px;
   }
 }
-
-

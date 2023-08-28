@@ -6,16 +6,19 @@
   </a>
   <div class="header__right">
     <input class="header__search" type="text">
-    <a class="header__link" routerLink="categories" routerLinkActive="header_link-active">Categories</a>
-    <a class="header__link" routerLink="contacts" routerLinkActive="header_link-active">Contacts Us</a>
+    <a class="header__link" routerLink="categories" routerLinkActive="header__link-active">Categories</a>
+    <a class="header__link" routerLink="contacts" routerLinkActive="header__link-active">Contacts Us</a>
     <img src="../../../assets/search-logo-w.svg" alt="menu logo" class="header__search-logo">
-    <div class="header__cart">
+    <div class="header__cart" (click)="showCart()">
       <img src="../../../assets/cart-logo.svg" alt="cart logo">
-      
+      <p class="header__cart-no">{{storageService.no}}</p> 
     </div>
-    <img class="header__account-logo" src="../../../assets/account-logo.svg" alt="account logo">
+    <img class="header__account-logo" src="../../../assets/account-logo.svg" alt="account logo" (click)="showLogin()">
     <img src="../../../assets/menu-logo.svg" alt="" class="header__menu-logo">
 
   </div>
 
 </header>
+
+<app-side-cart></app-side-cart>
+<app-header-login></app-header-login>

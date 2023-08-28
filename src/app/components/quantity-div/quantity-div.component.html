@@ -1,5 +1,5 @@
 <div class="quantity-div">
   <div *ngFor="let n of arr" class="quantity-div__item">
-    <button [ngClass]="{'quantity-div__button-active' : n == quantity}" class="quantity-div__button" (click)="btnClick(n)">{{n == 1? "single": n + "-pack"}}</button>
+    <button [ngClass]="{'quantity-div__button-active' : n == quantity}" class="quantity-div__button" (click)="btnClick(n)">{{n == 1? "single": n + " pack"}}</button>
   </div>
 </div>

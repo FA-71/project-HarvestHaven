@@ -1,0 +1,16 @@
+<div class="header-login-container" [style.display]="storageService.headerLoginVisible ? 'block' : 'none'" (click)="closeLogin($event)">
+</div>
+<div class="header-login" [ngClass]="storageService.headerLoginVisible ? 'header-login__animation-open' : (storageService.headerLoginHasOpened ? 'header-login__animation-close' : '')">
+  <div class="header-login__content">
+    <h2 class="header-login__title">Login</h2>
+    <label for="email" class="header-login__label">Email</label>
+    <input type="email" class="header-login__input" name="email">
+    <label for="password" class="header-login__label">Password</label>
+    <input type="password" class="header-login__input" name="password">
+    <a routerLink="login" class="header-login__forgot">Forgot password?</a>
+    <div class="header-login__btn">
+      <app-main-btn [color]="600" text="Sign in"></app-main-btn>
+    </div>
+    <p class="header-login__p">Don't have an account? <a routerLink="login" class="header-login__register">Register now</a></p>
+  </div>
+</div>

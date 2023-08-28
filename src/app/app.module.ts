@@ -17,6 +17,10 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { QuantityDivComponent } from './components/quantity-div/quantity-div.component';
 import { MainBtnComponent } from './components/main-btn/main-btn.component';
+import { SideCartComponent } from './components/side-cart/side-cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { HeaderLoginComponent } from './components/header-login/header-login.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { MainBtnComponent } from './components/main-btn/main-btn.component';
     ProductCardComponent,
     ProductPageComponent,
     QuantityDivComponent,
-    MainBtnComponent
+    MainBtnComponent,
+    SideCartComponent,
+    CartItemComponent,
+    HeaderLoginComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
