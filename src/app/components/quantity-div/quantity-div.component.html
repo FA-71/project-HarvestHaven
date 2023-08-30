@@ -1,5 +1,18 @@
+<p
+  [ngStyle]="size == 's' ? { 'font-size': '13px', 'margin-bottom': '1px' } : {}"
+  class="quantity-size"
+>
+  Pack Size: 100g
+</p>
 <div class="quantity-div">
   <div *ngFor="let n of arr" class="quantity-div__item">
-    <button [ngClass]="{'quantity-div__button-active' : n == quantity}" class="quantity-div__button" (click)="btnClick(n)">{{n == 1? "single": n + " pack"}}</button>
+    <button
+      [ngStyle]="size == 's' ? { 'font-size': '13px', height: '28px' } : {}"
+      [ngClass]="{ 'quantity-div__button-active': n == quantity }"
+      class="quantity-div__button"
+      (click)="btnClick(n)"
+    >
+      {{ n == 1 ? "single" : n +( size == 's' && mobile ? '' : " pack") }}
+    </button>
   </div>
 </div>

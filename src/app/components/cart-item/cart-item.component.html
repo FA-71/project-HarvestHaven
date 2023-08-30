@@ -10,7 +10,7 @@
     <img class="cart-item__bin" src="../../../assets/bin.svg" alt="bin logo" (click)="onBinClick()">
     </div>
     <div class="cart-item__quantity">
-      <app-quantity-div (quantityClicked)="handleQuantity($event)" [quantity]="no"></app-quantity-div>
+      <app-quantity-div (quantityClicked)="handleQuantity($event)" [quantity]="no" size="s"></app-quantity-div>
     </div>
     <p class="cart-item__shipping">Free Shipping</p>
     <p class="cart-item__price-p">Total: <span class="cart-item__price">${{product.price * no}}</span></p>

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-quantity-div',
@@ -7,9 +7,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class QuantityDivComponent {
   @Input() quantity: number = 1;  
+  @Input() size: string = '';
   @Output() quantityClicked = new EventEmitter<number>(); 
 
-  arr: number[] = [1, 3, 5, 10, 15];
+  arr: number[] = [1, 3, 5, 10, 15]
+  mobile: boolean = false
+ 
+  ngOnInit() { 
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 500)
+    { 
+     this.mobile = true 
+    }
+  }
 
   btnClick(n: number) { 
     this.quantity = n;

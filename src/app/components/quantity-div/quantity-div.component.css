@@ -1,3 +1,10 @@
+.quantity-size { 
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary-color-2);
+}
+
 .quantity-div { 
   width: 100%;
   display: flex;
