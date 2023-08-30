@@ -46,5 +46,11 @@ export class StorageService {
   private updateLocalStorage() { 
     localStorage.setItem('cart_list', JSON.stringify(this.cartList))
   }
+
+  removeItem(id: number) { 
+    delete this.cartList[id]
+    this.updateData()
+    this.updateLocalStorage()
+  }
   
 }

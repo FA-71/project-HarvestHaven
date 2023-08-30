@@ -3,9 +3,14 @@
     <img src="../../../assets/products/{{product.img}}" alt="{{product.name}}" class="cart-item__img">
   </a>
   <div class="cart-item__details">
-    <h3 class="cart-item__title">{{product.name}}</h3>
+    <div class="cart-item__top">
+      <a routerLink="/product/{{product.id}}" class="cart-item__link">
+        <h3 class="cart-item__title">{{product.name}}</h3>
+      </a>
+    <img class="cart-item__bin" src="../../../assets/bin.svg" alt="bin logo" (click)="onBinClick()">
+    </div>
     <div class="cart-item__quantity">
-      <app-quantity-div [quantity]="no"></app-quantity-div>
+      <app-quantity-div (quantityClicked)="handleQuantity($event)" [quantity]="no"></app-quantity-div>
     </div>
     <p class="cart-item__shipping">Free Shipping</p>
     <p class="cart-item__price-p">Total: <span class="cart-item__price">${{product.price * no}}</span></p>
