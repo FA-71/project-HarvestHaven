@@ -1,4 +1,4 @@
-<div class="header-login-container" [style.display]="storageService.headerLoginVisible ? 'block' : 'none'" (click)="closeLogin($event)">
+<div class="header-login-container" [style.display]="storageService.headerLoginVisible ? 'block' : 'none'" (click)="clickOverlay($event)">
 </div>
 <div class="header-login" [ngClass]="storageService.headerLoginVisible ? 'header-login__animation-open' : (storageService.headerLoginHasOpened ? 'header-login__animation-close' : '')">
   <div class="header-login__content">
@@ -7,10 +7,10 @@
     <input type="email" class="header-login__input" name="email">
     <label for="password" class="header-login__label">Password</label>
     <input type="password" class="header-login__input" name="password">
-    <a routerLink="login" class="header-login__forgot">Forgot password?</a>
+    <a routerLink="login" class="header-login__forgot" (click)="closeLogin()">Forgot password?</a>
     <div class="header-login__btn">
       <app-main-btn [color]="600" text="Sign in"></app-main-btn>
     </div>
-    <p class="header-login__p">Don't have an account? <a routerLink="login" class="header-login__register">Register now</a></p>
+    <p class="header-login__p">Don't have an account? <a routerLink="sign_up" class="header-login__register" (click)="closeLogin()">Register now</a></p>
   </div>
 </div>

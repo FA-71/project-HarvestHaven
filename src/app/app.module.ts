@@ -21,6 +21,7 @@ import { SideCartComponent } from './components/side-cart/side-cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { HeaderLoginComponent } from './components/header-login/header-login.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     SideCartComponent,
     CartItemComponent,
     HeaderLoginComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SignUpPageComponent
   ],
   imports: [
     BrowserModule,

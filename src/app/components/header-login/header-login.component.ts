@@ -10,12 +10,16 @@ export class HeaderLoginComponent {
 
   constructor(public storageService: StorageService) {}
 
-  closeLogin(event: any) { 
+  clickOverlay(event: any) { 
     const container = document.querySelector('.header-login-container');
 
     if (event.target == container)
     {
-      this.storageService.headerLoginVisible = false
+      this.closeLogin()
     }
   } 
+
+  closeLogin() { 
+    this.storageService.headerLoginVisible = false
+  }
 }
