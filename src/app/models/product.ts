@@ -4,4 +4,6 @@ export interface Product {
     img: string; 
     des: string; 
     price: number; 
+    size: number;
+    pack_type: string;
 }

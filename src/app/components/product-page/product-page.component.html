@@ -5,7 +5,7 @@
     <p class="product-page__des">{{product.des}}</p>
     <div class="product-page__quantity">
       <h3 class="product-page__h3">Quantity: </h3>
-      <app-quantity-div (quantityClicked)="handleQuantity($event)"></app-quantity-div>
+      <app-quantity-div (quantityClicked)="handleQuantity($event)" [pack_size]="product.size" [pack_type]="product.pack_type"></app-quantity-div>
     </div>
     <p class="product-page__shipping">Free Shipping</p>
     <div class="product-page__buy-div">

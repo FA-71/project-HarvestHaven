@@ -6,6 +6,8 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./quantity-div.component.css']
 })
 export class QuantityDivComponent {
+  @Input() pack_size!: number;
+  @Input() pack_type!: string;
   @Input() quantity: number = 1;  
   @Input() size: string = '';
   @Output() quantityClicked = new EventEmitter<number>(); 
