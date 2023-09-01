@@ -11,6 +11,7 @@ export class StorageService {
   cartHasOpened = false
   headerLoginVisible = false 
   headerLoginHasOpened = false 
+  mobileMenuVisible = false
 
   constructor() { 
     const p_list = localStorage.getItem('cart_list');

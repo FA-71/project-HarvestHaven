@@ -14,7 +14,7 @@
       <p class="header__cart-no">{{storageService.no}}</p> 
     </div>
     <img class="header__account-logo" src="../../../assets/account-logo.svg" alt="account logo" (click)="showLogin()">
-    <img src="../../../assets/menu-logo.svg" alt="" class="header__menu-logo">
+    <img src="../../../assets/menu-logo.svg" alt="" class="header__menu-logo" (click)="openMoblieMenu()">
 
   </div>
 
@@ -22,3 +22,4 @@
 
 <app-side-cart></app-side-cart>
 <app-header-login></app-header-login>
+<app-mobile-menu [style.display]="storageService.mobileMenuVisible ? 'block' : 'none'"></app-mobile-menu>

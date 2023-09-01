@@ -26,4 +26,8 @@ export class HeaderComponent implements OnInit {
     this.storageService.headerLoginVisible = !this.storageService.headerLoginVisible
     this.storageService.headerLoginHasOpened = true
   }
+
+  openMoblieMenu() { 
+    this.storageService.mobileMenuVisible = !this.storageService.mobileMenuVisible
+  }
 }

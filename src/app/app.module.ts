@@ -22,6 +22,7 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { HeaderLoginComponent } from './components/header-login/header-login.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
+import { MoblieMenuComponent } from './components/mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.comp
     CartItemComponent,
     HeaderLoginComponent,
     LoginPageComponent,
-    SignUpPageComponent
+    SignUpPageComponent,
+    MoblieMenuComponent
   ],
   imports: [
     BrowserModule,
