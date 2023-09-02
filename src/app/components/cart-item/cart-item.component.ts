@@ -24,7 +24,7 @@ export class CartItemComponent implements OnInit {
   }
 
   handleQuantity(no: number) { 
-    this.storageService.addToCart(this.id, no)
+    this.storageService.updateCart(this.id, no)
   }
 
 }

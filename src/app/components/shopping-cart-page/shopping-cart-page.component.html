@@ -1,0 +1,26 @@
+<div class="shopping-cart">
+  <h1 class="shopping-cart__title">Shopping Cart</h1>
+  <div class="shopping-cart__content">
+    <div class="shopping-cart__cards">
+      <app-shopping-cart-content></app-shopping-cart-content>
+    </div>
+    <div class="shopping-cart__summary">
+      <div class="shopping-cart__summary-item">
+        <p>Total Items({{storageService.no}}):</p> 
+        <p>${{storageService.totalPrice}}</p>
+      </div>
+      <div class="shopping-cart__summary-item">
+        <p>Shipping:</p>
+        <p>Free</p>
+      </div>
+      <div class="shopping-cart__summary-line"></div>
+      <div class="shopping-cart__total">
+        <p>Total:</p>
+        <p>${{storageService.totalPrice}}</p>
+      </div>
+      <div class="shopping-cart__checkout-btn">
+        <app-main-btn text="Go to checkout"></app-main-btn>
+      </div>
+    </div>
+  </div>
+</div>

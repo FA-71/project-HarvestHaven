@@ -1,19 +1,21 @@
 import { Injectable } from '@angular/core';
+import { ProductService } from './product.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StorageService {
   cartList: {[key: number]: number} = {}
-  no = 0;
+  no = 0
+  totalPrice = 0
   idList: number[] = []
-  cartVisibility = false;
+  cartVisibility = false
   cartHasOpened = false
   headerLoginVisible = false 
   headerLoginHasOpened = false 
   mobileMenuVisible = false
 
-  constructor() { 
+  constructor(private productService: ProductService) { 
     const p_list = localStorage.getItem('cart_list');
     if (!(p_list)) { 
       this.updateLocalStorage();
@@ -24,9 +26,13 @@ export class StorageService {
   }
 
   addToCart(id: number, items: number) { 
-    this.cartList[id] = items
     this.cartVisibility = true
     this.cartHasOpened = true
+    this.updateCart(id, items)
+  }
+
+  updateCart(id: number, items: number) { 
+    this.cartList[id] = items
     this.updateData()
     this.updateLocalStorage()
   }
@@ -39,9 +45,18 @@ export class StorageService {
     this.idList = Object.keys(this.cartList).map(Number) 
   }
 
+  setTotal() { 
+    let t = 0
+    for (let id of this.idList) { 
+      t += this.cartList[id] * this.productService.get_product(id).price
+    }
+    this.totalPrice = t;
+  }
+
   updateData() { 
     this.setLength()
     this.setIdList()
+    this.setTotal()
   }
 
   private updateLocalStorage() { 

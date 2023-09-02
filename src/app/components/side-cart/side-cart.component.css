@@ -42,10 +42,6 @@
   width: 40px;
 }
 
-.cart__content{ 
-  overflow: auto;
-  height: 80vh;
-}
 
 .cart__animation--open { 
   animation: cart_open 0.5s ease forwards;
@@ -56,6 +52,11 @@
 .cart__animation--close { 
   animation: cart_close 0.5s linear forwards; 
   pointer-events: none; 
+}
+
+.cart__content { 
+  overflow: auto;
+  height: 80vh;
 }
 
 @media screen and (max-width: 500px) { 

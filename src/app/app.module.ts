@@ -23,6 +23,8 @@ import { HeaderLoginComponent } from './components/header-login/header-login.com
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
 import { MoblieMenuComponent } from './components/mobile-menu/mobile-menu.component';
+import { ShoppingCartContentComponent } from './components/shopping-cart-content/shopping-cart-content.component';
+import { ShoppingCartPageComponent } from './components/shopping-cart-page/shopping-cart-page.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { MoblieMenuComponent } from './components/mobile-menu/mobile-menu.compon
     HeaderLoginComponent,
     LoginPageComponent,
     SignUpPageComponent,
-    MoblieMenuComponent
+    MoblieMenuComponent,
+    ShoppingCartContentComponent,
+    ShoppingCartPageComponent
   ],
   imports: [
     BrowserModule,

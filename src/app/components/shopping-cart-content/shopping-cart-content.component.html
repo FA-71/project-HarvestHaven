@@ -1,0 +1,3 @@
+<div class="cart-content">
+  <app-cart-item *ngFor="let key of storageService.idList" [id]="key" [no]="storageService.cartList[key]"></app-cart-item>
+</div>
