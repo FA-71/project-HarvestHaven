@@ -1,4 +1,4 @@
-<div class="mobile-menu">
+<div class="mobile-menu" [ngClass]="storageService.mobileMenuVisible ? 'mobile-menu__animation-open' : 'mobile-menu__animation-close'">
   <a class="mobile-menu__link" (click)="closeMenu()" routerLink="/">Home</a>
   <a class="mobile-menu__link" (click)="closeMenu()" routerLink="/categories">Categories</a>
   <a class="mobile-menu__link" (click)="closeMenu()" routerLink="/contacts">Contact Us</a>
@@ -6,4 +6,4 @@
   <a class="mobile-menu__link" (click)="closeMenu()" routerLink="/login">Login</a>
 </div>
 
-<div class="mobile-menu-overlay" (click)="onClickOverlay($event)"></div>
+<div class="mobile-menu-overlay" (click)="onClickOverlay($event)" ></div>

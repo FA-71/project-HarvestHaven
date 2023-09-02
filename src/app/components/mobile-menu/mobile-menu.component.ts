@@ -8,7 +8,7 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class MoblieMenuComponent {
 
-  constructor(private storageService: StorageService) {}
+  constructor(public storageService: StorageService) {}
 
   onClickOverlay(event: any) { 
     const overlay = document.querySelector('.mobile-menu-overlay')

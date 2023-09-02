@@ -34,3 +34,18 @@
   width: 100%;
   height: 100%;
 }
+
+.mobile-menu__animation-open { 
+  animation: open 0.5s forwards ease; 
+}
+
+.mobile-menu__animation-close { 
+  animation: open 0.5s forwards reverse ease;
+}
+
+@keyframes open { 
+  from {transform: translateY(-100%);}
+
+  to {transform: translateY(0);}
+}
+
