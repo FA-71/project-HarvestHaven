@@ -20,15 +20,38 @@ header {
 .header__search { 
   height: 30px;
   width: 380px;
-  border-radius: 12px;
-  padding-inline: 15px;
-  border: 1px solid var(--primary-color-600);
-  background: url(../../../assets/search-logo.svg) no-repeat 98% , white;
+
 }
 
-.header__search:focus { 
+.header__input { 
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--primary-color-600);
+  background: url(../../../assets/search-logo.svg) no-repeat 98% , white;
+  padding-inline: 15px;
+  box-sizing: border-box;
+}
+
+.header__input:focus { 
   box-shadow: 1px 4px 7px 1px rgba(0, 0, 0, 0.142);
   outline: none;
+}
+
+.header__search-answer { 
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.header__search-answer:hover { 
+  display: block;
+}
+
+.header__input:focus + .header__search-answer { 
+  display: block;
 }
 
 .header__right { 

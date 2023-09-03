@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
 import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
@@ -7,14 +9,16 @@ import { StorageService } from 'src/app/services/storage.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild('filter') filter!: ElementRef<HTMLInputElement>
   title = "HavestHaven"
   items: number = 0;
   cartVisible: boolean = false
+  filteredList: Product[] = []
 
-  constructor(public storageService: StorageService) {}
+  constructor(public storageService: StorageService, private productService: ProductService) {}
 
   ngOnInit() { 
-    
+
   }
 
   showCart() { 
@@ -29,5 +33,19 @@ export class HeaderComponent implements OnInit {
 
   openMoblieMenu() { 
     this.storageService.mobileMenuVisible = !this.storageService.mobileMenuVisible
+  }
+
+  onSearch(text: string) { 
+    this.filteredList = []
+    if (text == '') { 
+      return 
+    }
+    this.filteredList = this.productService.products.filter(product => product?.name.toLowerCase().includes(text.toLowerCase()))
+
+    console.log(this.filteredList)
+  }
+
+  clearSearchInput() { 
+    this.filter.nativeElement.value = ''
   }
 }

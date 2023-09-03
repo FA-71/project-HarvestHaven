@@ -6,6 +6,7 @@ import { ProductService } from './product.service';
 })
 export class StorageService {
   cartList: {[key: number]: number} = {}
+  productList : string[] = []
   no = 0
   totalPrice = 0
   idList: number[] = []
@@ -22,6 +23,7 @@ export class StorageService {
     } else {
       this.cartList = JSON.parse(p_list)
       this.updateData()
+      this.setProductList()
     }
   }
 
@@ -51,6 +53,10 @@ export class StorageService {
       t += this.cartList[id] * this.productService.get_product(id).price
     }
     this.totalPrice = t;
+  }
+
+  setProductList() { 
+    this.productList = this.productService.get_product_names()
   }
 
   updateData() { 

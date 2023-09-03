@@ -1,0 +1,18 @@
+.item { 
+  height: 80px;
+}
+
+.item__link { 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.item__img { 
+  height: 90%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}

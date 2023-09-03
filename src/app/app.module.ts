@@ -25,6 +25,7 @@ import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.comp
 import { MoblieMenuComponent } from './components/mobile-menu/mobile-menu.component';
 import { ShoppingCartContentComponent } from './components/shopping-cart-content/shopping-cart-content.component';
 import { ShoppingCartPageComponent } from './components/shopping-cart-page/shopping-cart-page.component';
+import { SearchItemComponent } from './components/search-item/search-item.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ShoppingCartPageComponent } from './components/shopping-cart-page/shopp
     SignUpPageComponent,
     MoblieMenuComponent,
     ShoppingCartContentComponent,
-    ShoppingCartPageComponent
+    ShoppingCartPageComponent,
+    SearchItemComponent
   ],
   imports: [
     BrowserModule,
