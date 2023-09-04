@@ -47,5 +47,6 @@ export class HeaderComponent implements OnInit {
 
   clearSearchInput() { 
     this.filter.nativeElement.value = ''
+    this.filteredList = []
   }
 }

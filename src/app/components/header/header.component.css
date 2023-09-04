@@ -44,6 +44,9 @@ header {
   border-radius: 8px;
   margin-top: 20px;
   padding: 5px;
+
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.338);
+  border: 1px solid rgba(0, 0, 0, 0.079);
 }
 
 .header__search-answer:hover { 
@@ -89,6 +92,10 @@ header {
 
 .header__menu-logo { 
   display: none;
+}
+
+.header__account-logo { 
+  cursor: pointer;
 }
 
 @media screen and (max-width:1000px) { 
