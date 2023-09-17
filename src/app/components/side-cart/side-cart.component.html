@@ -23,5 +23,11 @@
     <div class="cart__content">
       <app-shopping-cart-content></app-shopping-cart-content>
     </div>
+    <div class="cart__bottom">
+      <p>Total: <span class="cart__total">{{storageService.totalPrice}}</span></p>
+      <a routerLink="/shopping_cart" class="cart__total-btn">
+        <app-main-btn text="Proceed" (btnClicked)="closeCart()" ></app-main-btn>
+      </a>
+    </div>
   </div>
 </div>

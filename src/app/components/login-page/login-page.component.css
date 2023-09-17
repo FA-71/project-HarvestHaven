@@ -56,3 +56,13 @@
   color: var(--secondary-blue);
   text-decoration: none;
 }
+
+.login__forgot-div { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.login__forgot { 
+  font-size: 14px;
+  font-weight: 500;
+}

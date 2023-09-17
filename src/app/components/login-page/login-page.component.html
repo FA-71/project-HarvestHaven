@@ -4,7 +4,10 @@
       <form class="login__form">
         <input class="login__input" type="email" name="email" id="email" placeholder="Email">
         <input class="login__input" type="password" name="password" id="password" placeholder="Password">
-        <a routerLink="/sign_up" class="login__forgot">Forgot password?</a>
+        <div class="login__forgot-div">
+          <a routerLink="/sign_up" class="login__forgot login__link">Forgot password?</a>
+          <label for="tick"><input type="checkbox" name="tick"> keep signed in</label>
+        </div>
         <app-main-btn text="Login"></app-main-btn>
         <p class="login__login">Don't have an account? <a routerLink="/sign_up" class="login__link">Register now</a></p>
       </form>
