@@ -48,5 +48,23 @@ export class HeaderComponent implements OnInit {
   clearSearchInput() { 
     this.filter.nativeElement.value = ''
     this.filteredList = []
+
+    if (window.innerWidth <= 800)  {
+      const search = document.querySelector('.header__search') as HTMLElement
+      if (search) { 
+        search.style.display = 'none'
+      }
+    }
+  }
+
+  openSearch() { 
+    const search = document.querySelector('.header__search') as HTMLElement
+    if (search) { 
+      if (search.style.display == 'block') { 
+        search.style.display = 'none'
+      } else { 
+        search.style.display = 'block';
+      }
+    }
   }
 }

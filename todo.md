@@ -1,7 +1,5 @@
 - best selling 
 - mobile search 
 - shopping cart mobile 
-- shopping cart total 
-- login fix 
 - home slide buttons 
 - add more to home slide 

@@ -15,7 +15,7 @@
     </div>
     <a class="header__link" routerLink="categories" routerLinkActive="header__link-active">Categories</a>
     <a class="header__link" routerLink="contacts" routerLinkActive="header__link-active">Contacts Us</a>
-    <img src="../../../assets/search-logo-w.svg" alt="search logo" class="header__search-logo" >
+    <img src="../../../assets/search-logo-w.svg" alt="search logo" class="header__search-logo" (click)="openSearch()" >
     <div class="header__cart" (click)="showCart()">
       <img src="../../../assets/cart-logo.svg" alt="cart logo">
       <p class="header__cart-no">{{storageService.no}}</p> 
