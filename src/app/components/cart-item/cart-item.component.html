@@ -1,13 +1,13 @@
 <div class="cart-item">
   <a routerLink="/product/{{product.id}}" class="cart-item__link">
-    <img src="../../../assets/products/{{product.img}}" alt="{{product.name}}" class="cart-item__img">
+    <img src="assets/products/{{product.img}}" alt="{{product.name}}" class="cart-item__img">
   </a>
   <div class="cart-item__details">
     <div class="cart-item__top">
       <a routerLink="/product/{{product.id}}" class="cart-item__link">
         <h3 class="cart-item__title">{{product.name}}</h3>
       </a>
-    <img class="cart-item__bin" src="../../../assets/bin.svg" alt="bin logo" (click)="onBinClick()">
+    <img class="cart-item__bin" src="assets/bin.svg" alt="bin logo" (click)="onBinClick()">
     </div>
     <div class="cart-item__quantity">
       <app-quantity-div (quantityClicked)="handleQuantity($event)" [quantity]="no" size="s" [pack_size]="product.size" [pack_type]="product.pack_type"></app-quantity-div>
